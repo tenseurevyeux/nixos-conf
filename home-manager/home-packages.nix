@@ -11,7 +11,6 @@
     pavucontrol
     telegram-desktop
     vesktop
-    nuclear
     pkgsUnstable.zed-editor
 
     # CLI utils
@@ -42,6 +41,10 @@
     wtype
     yt-dlp
     zip
+    file
+    tcpdump
+    nmap
+    cava
 
     # Coding stuff
     python311

@@ -8,8 +8,8 @@
         position = "top";
         height = 30;
         modules-left = ["hyprland/workspaces"];
-        modules-center = ["hyprland/window"];
-        modules-right = ["custom/weather" "pulseaudio" "battery" "clock" "tray"];
+        modules-center = [];
+        modules-right = ["cpu" "memory" "custom/weather" "pulseaudio" "battery" "clock" "tray"];
         "hyprland/workspaces" = {
           disable-scroll = true;
           show-special = true;
@@ -33,6 +33,14 @@
             "*" = 9;
           };
         };
+	
+	"cpu" = {
+  	  format = "CPU: {usage}%";
+	};
+
+	"memory" = {
+  	  format = "RAM: {percentage}%";
+	};
 
         "custom/weather" = {
           format = " {} ";
@@ -69,7 +77,7 @@
         };
 
         "clock" = {
-          format = "{:%d.%m.%Y - %H:%M}";
+          format = "{:%d.%m.%Y | %H:%M}";
           format-alt = "{:%A, %B %d at %R}";
         };
 
