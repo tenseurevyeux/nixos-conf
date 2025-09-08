@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{ pkgs, pkgsUnstable, ... }: {
   nixpkgs.config.allowUnfree = true;
 
   home.packages = with pkgs; [
@@ -11,6 +11,8 @@
     pavucontrol
     telegram-desktop
     vesktop
+    nuclear
+    pkgsUnstable.zed-editor
 
     # CLI utils
     bc

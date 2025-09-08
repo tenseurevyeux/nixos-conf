@@ -18,4 +18,8 @@
     dedicatedServer.openFirewall = true;
     localNetworkGameTransfers.openFirewall = true;
   };
+  
+   virtualisation.virtualbox.host.enable = true;
+   users.extraGroups.vboxusers.members = [ "tenseurevyeux" ];
+   virtualisation.virtualbox.host.enableExtensionPack = true;
 }
