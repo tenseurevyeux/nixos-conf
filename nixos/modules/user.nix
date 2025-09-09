@@ -8,4 +8,5 @@
       extraGroups = [ "wheel" "networkmanager" ];
     };
   };
+  services.getty.autologinUser = user;
 }

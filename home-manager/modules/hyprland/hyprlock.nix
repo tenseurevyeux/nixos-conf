@@ -4,7 +4,7 @@
     settings = {
       general = {
         disable_loading_bar = true;
-        grace = 10;
+        grace = 0;
         hide_cursor = true;
         no_fade_in = false;
       };
@@ -39,7 +39,7 @@
           inner_color = "rgb(40, 40, 40)";
           outer_color = "rgb(60, 56, 54)";
           outline_thickness = 5;
-          placeholder_text = "sussy baka";
+          placeholder_text = "enter passwd";
           shadow_passes = 1;
         }
       ];
