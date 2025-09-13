@@ -2,8 +2,6 @@
   nixpkgs.config.allowUnfree = true;
 
   home.packages = with pkgs; [
-    # Packages in each category are sorted alphabetically
-
     # Desktop apps
     anki
     imv
@@ -12,6 +10,8 @@
     telegram-desktop
     vesktop
     pkgsUnstable.zed-editor
+    libreoffice-qt6
+    vscode
 
     # CLI utils
     bc
@@ -45,9 +45,12 @@
     tcpdump
     nmap
     cava
+    acpi 
+    cmatrix
+    openvpn
+    jq
 
     # Coding stuff
-    python311
     rustc 
     cargo
     rust-analyzer

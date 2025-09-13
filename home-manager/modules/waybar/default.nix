@@ -9,7 +9,7 @@
         height = 30;
         modules-left = ["hyprland/workspaces"];
         modules-center = [];
-        modules-right = ["cpu" "memory" "custom/weather" "pulseaudio" "battery" "clock" "tray"];
+        modules-right = ["hyprland/language" "backlight" "pulseaudio" "battery" "clock" "tray"];
         "hyprland/workspaces" = {
           disable-scroll = true;
           show-special = true;
@@ -33,20 +33,12 @@
             "*" = 9;
           };
         };
-	
-	"cpu" = {
-  	  format = "CPU: {usage}%";
-	};
 
-	"memory" = {
-  	  format = "RAM: {percentage}%";
-	};
-
-        "custom/weather" = {
-          format = " {} ";
-          exec = "curl -s 'wttr.in/Tyumen?format=%c%t'";
-          interval = 300;
-          class = "weather";
+	"hyprland/language" = {
+          format-en = "en";
+          format-ru = "ru";
+          min-length = 2;
+          tooltip = false;
         };
 
         "pulseaudio" = {
@@ -65,6 +57,15 @@
           on-click = "pavucontrol";
         };
 
+        "backlight" = {
+    	  format ="☀️{percent}%";
+    	  device = "intel_backlight"; # change to your device
+	  on-click = "brightnessctl set 50%";
+    	  on-scroll-up = "brightnessctl set +5%";
+    	  on-scroll-down = "brightnessctl set 5%-";
+	  tooltip = false;
+  	};
+
         "battery" = {
           states = {
             warning = 30;
@@ -79,6 +80,7 @@
         "clock" = {
           format = "{:%d.%m.%Y | %H:%M}";
           format-alt = "{:%A, %B %d at %R}";
+	  tooltip = false;
         };
 
         "tray" = {

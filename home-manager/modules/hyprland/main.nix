@@ -23,41 +23,45 @@
         "waybar"
         "wl-paste --type text --watch cliphist store"
         "wl-paste --type image --watch cliphist store"
-	"hyprlock"
+        "hyprlock"
       ];
 
       general = {
-        gaps_in = 0;
-        gaps_out = 0;
+        gaps_in = 5;
+        gaps_out = 5;
 
-        border_size = 5;
+        border_size = 2;
 
         "col.active_border" = "rgba(d65d0eff) rgba(98971aff) 45deg";
         "col.inactive_border" = "rgba(3c3836ff)";
 
         resize_on_border = true;
 
-        allow_tearing = false;
+        allow_tearing = true;
         layout = "master";
       };
 
       decoration = {
-        rounding = 0;
+        rounding = 5;
 
         active_opacity = 1.0;
         inactive_opacity = 1.0;
 
         shadow = {
-          enabled = false;
+          enabled = true;
         };
 
         blur = {
-          enabled = false;
+          enabled = true;
         };
       };
 
       animations = {
-        enabled = false;
+        enabled = true;
+         animation = [
+           "workspaces, 1, 6, default"
+         ];
+
       };
 
       input = {
@@ -95,8 +99,7 @@
         "noborder,nofocus,class:(showmethekey-gtk)"
 
         "workspace 3,class:(zathura)"
-        "workspace 5,class:(telegram)"
-        "workspace 5,class:(vesktop)"
+        "workspace 8,class:(vesktop)"
 
         "suppressevent maximize, class:.*"
         "nofocus,class:^$,title:^$,xwayland:1,floating:1,fullscreen:0,pinned:0"
@@ -107,6 +110,7 @@
         "maxsize 1 1, class:^(xwaylandvideobridge)$"
         "noblur, class:^(xwaylandvideobridge)$"
         "nofocus, class:^(xwaylandvideobridge)$"
+	"opacity 0.9 override, class:^(Alacritty)$"
       ];
 
       workspace = [
