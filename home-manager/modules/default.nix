@@ -11,7 +11,6 @@
     ./starship.nix
     ./stylix.nix
     ./swaync
-    ./tmux.nix
     ./waybar
     ./wofi
     ./zathura.nix
